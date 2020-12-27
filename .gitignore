@@ -1,0 +1,12 @@
+.DS_Store
+.idea/
+*.iml
+!resources/log4j2.xml
+*.class
+out
+*.xml
+!pom.xml
+target
+*log*
+production
+META-INF

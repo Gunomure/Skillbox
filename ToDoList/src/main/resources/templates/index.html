@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>todolist</title>
+</head>
+<body>
+
+<h1>
+    Список дел
+</h1>
+
+<table border="1">
+    <tr>
+        <th>Дело</th>
+        <th>Дедлайн</th>
+        <th>Создано</th>
+    </tr>
+
+    <tr th:each="action : ${actions}">
+        <td th:text="${action.toDo}">what to do</td>
+        <td th:text="${action.deadline}">deadline</td>
+        <td th:text="${action.created}">created</td>
+    </tr>
+</table >
+
+<h4>
+    <p th:text="'Количество дел: ' + ${actionsCount}"></p>
+</h4>
+
+<form action="/todo" method="get">
+    <button type="submit" value="Submit" class="btn-link">Добавить дело</button>
+</form>
+
+</body>
+</html>
